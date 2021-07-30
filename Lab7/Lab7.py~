@@ -1,0 +1,72 @@
+# Lab7.py (Campbell)
+
+def main():
+    #print(twice2([4, 3, 2, 5]))
+
+    #triangle(5)
+
+    #print(min_grid([[4, 5, 6],[1, 2, 3]]))
+    
+    #print(has_most([[1, 2, 2],[3, 1, 3]], 3))
+    #print(has_most([[1, 2, 2],[3, 1, 3]], 2))
+
+    #print(is_descending([]))
+    #print(is_descending([4]))
+    #print(is_descending([4, 3]))
+    #print(is_descending([4, 4]))
+
+    # print(all_same([]))    # t
+    # print(all_same([[1]])) # t
+    # print(all_same([[1,2,1,1],[1,1,1,1]])) # f
+    # print(all_same([[1,1,1,1],[1,1,1,1]])) # t
+
+    # print(all_different([])) # t
+    # print(all_different([[1]])) # t
+    # print(all_different([[1,2,1,1],[1,1,1,1]])) # f
+    # print(all_different([[1,1,1,1],[1,1,1,1]])) # f
+    # print(all_different([[1,2,3,4],[5,6,7,8]])) # t
+
+    # grid1 = [[1,2,2,4],
+    #          [5,2,2,8]]
+    # print(find_box(grid1, 2))
+
+    # print(find_rectangle(grid1, 1, 1, 8))
+    # print(find_rectangle(grid1, 2, 2, 2))
+    # print(find_rectangle(grid1, 2, 3, 2))
+    pass
+
+def get_dimensions(grid):
+    """ return the number of rows and columns in a grid """
+    return (len(grid), 0 if len(grid)==0 else len(grid[0]))
+
+def twice(lst):
+    pass
+
+def triangle(n):
+    pass
+
+
+def min_grid(grid):
+    pass
+
+def has_most(grid, target):
+    pass
+
+def is_descending(lst):
+    pass
+
+def all_same(grid):
+    pass
+
+def all_different(grid):
+    pass
+
+def find_box(grid, target):
+    pass
+
+def find_rectangle(grid, H, W, target):
+    pass
+
+
+if __name__ == "__main__":
+    main()
