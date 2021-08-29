@@ -13,18 +13,15 @@ class Seive extends LazyList {
     super(start);
 
     this.found = [];
+  }
 
-    this.filter = x => {
-      for (let prime of this.found) if (x % prime == 0) return false;
-      return true;
-    };
+  filter(value) {
+    for (let prime of this.found) if (value % prime == 0) return false;
+    return true;
   }
 
   nextPrime() {
-    while (!this.filter(this.head)) {
-      // console.log(this.head);
-      this.next();
-    }
+    while (!this.filter(this.head)) this.next();
 
     this.found.push(this.head);
 
@@ -32,7 +29,7 @@ class Seive extends LazyList {
   }
 }
 
-let GlobalSieve = new Seive(2);
+let globalSieve = new Seive(2);
 
 function sumDigits(num) {
   let sum = 0;
@@ -43,9 +40,9 @@ function sumDigits(num) {
 }
 
 function prime(num) {
-  while (GlobalSieve.nextPrime() < num);
+  while (globalSieve.nextPrime() < num);
 
-  return GlobalSieve.found.includes(num);
+  return globalSieve.found.includes(num);
 }
 
 function additivePrime(num) {
@@ -66,7 +63,8 @@ function additivePrimesList(n) {
 }
 
 function main() {
-  console.log(additivePrimesList(10000));
+  // console.log(additivePrimesList(10000));
+  for (let i = 0; i < 10000; i++) if (additivePrime(i)) console.log(i);
 }
 
 main();
