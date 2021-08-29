@@ -40,6 +40,8 @@ function wordfind(grid, words) {
       for (let c = 0; c < grid[0].length; c++)
         for (let dr = -1; dr < 2; dr++)
           for (let dc = -1; dc < 2; dc++) {
+            if (dr === 0 && dc === 0) continue;
+
             let built = ""; // We will build the found word in here
 
             traverseDirection(
@@ -51,7 +53,7 @@ function wordfind(grid, words) {
             );
 
             // Capitalize the word if found in the direction
-            if (built.toUpperCase() == word.toUpperCase()) {
+            if (built.toUpperCase() === word.toUpperCase()) {
               traverseDirection(
                 grid,
                 word,
